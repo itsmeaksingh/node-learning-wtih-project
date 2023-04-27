@@ -1,0 +1,163 @@
+Topics: 
+    01.  Intro
+    02.  Course Intro
+    03.  What Is Node
+    04.  Course Requirements
+    05.  Course Structure
+    06.  Browser Vs Server
+    07.  Install Node
+    08.  Repl
+    09.  Cli
+    10. Source Code
+    11. Globals
+    12. Modules Setup
+    13. First Module
+    14. Alternative Syntax
+    15. Mind Grenade
+    16. Built-In Module Intro
+    17. Os Module
+    18. Path Module 
+    19. Fs Module (Sync) 
+    20. Fs Module (Async) 
+    21. Sync Vs Async 
+    22. HTTP Intro 
+    23. HTTP Module (Setup) 
+    24. HTTP Module (More Features) 
+    25. NPM Info 
+    26. NPM Command 
+    27. First Package 
+    28. Share Code 
+    29. Nodemon 
+    30. Uninstall 
+    31. Global Install 
+    32. Package-Lock.Json 
+    33. Important Topics Intro 
+    34. Event Loop 
+    35. Event Loop Slides 
+    36. Event Loop Code Examples 
+    37. Async Patterns - Blocking Code 
+    38. Async Patterns - Setup Promises 
+    39. Async Patterns - Refactor To Async 
+    40. Async Patterns - Node's Native Option 
+    41. Events Info 
+    42. Events Emitter - Code Example 
+    43. Events Emitter - Additional Info 
+    44. Events Emitter - Http Module Example 
+    45. Streams Intro 
+    46. Streams - Read File 
+    47. Streams - Additional Info 
+    48. Streams - HTTP Example 
+    49. End Of Node Tutorial Module 
+    50. HTTP Request/Response Cycle 
+    51. HTTP Messages 
+    52. Starter Project Install 
+    53. Starter Overview 
+    54. HTTP Basics 
+    55. HTTP - Headers 
+    56. HTTP - Request Object 
+    57. HTTP - Html File 
+    58. HTTP - App Example 
+    59. Express Info 
+    60. Express Basics 
+    61. Express-App Example 
+    62. Express - All Static 
+    63. API Vs SSR 
+    64. JSON Basics 
+    65. Params, Query String - Setup 
+    66. Route Params 
+    67. Params - Extra Info 
+    68. Query String 
+    69. Additional Params And Query String Info 
+    70. Middleware - Setup 
+    71. APP.USE 
+    72. Multiple Middleware Functions 
+    73. Additional Middleware Info 
+    74. Methods - GET 
+    75. Methods - POST 
+    76. Methods - POST (Form Example) 
+    77. Methods - POST (Javascript Example) 
+    78. Install Postman 
+    79. Methods - PUT 
+    80. Methods - DELETE 
+    81. Express Router - Setup 
+    82. Express Router - Controllers 
+
+
+
+NODE JS:
+    - Environment to run JS outside Browser
+    - Build on chrome's v8 JS engine
+    - Big community
+    - Easy Full Stack
+
+REQUIREMENTS:
+    - HTML, CSS, JS, ES6
+    - callbacks, Promises, Async-Await
+
+Browser VS Nodejs
+    - Browser:
+        - DOM
+        - Window
+        - Interactive Apps
+        - No filesystem 
+        - Fragmentation 
+        - ES6 Modules
+    
+    - Nodejs: 
+        - No DOM
+        - No Window
+        - Server-side Apps
+        - filesystem
+        - versions
+        - CommonJS
+
+
+Build-in Modules:
+    - OS 
+    - PATH 
+    - FS 
+    - HTTP 
+    
+npm - Global command, comes with Node
+npm --version
+
+local dependency - use it only in this particular Project
+npm i <packageName>
+
+Global dependency - use it in any project
+npm Install -g <packageName>
+
+package.json - manifest file(stores important info about project/package)
+manual approach (create package.json in the root, create properties etc)
+npm init (step by step, press enter to skip)
+npm init -y (everything default)
+
+// example
+const _ = require("lodash");
+
+const items = [1, [2, [3, [4]]]];
+const newItems = _.flattenDeep(items);
+
+console.log(newItems);
+
+
+
+// Impotent Topics
+    - Event loop, Async patterns, events Emitter and Streams
+    - Main Concepts
+    - Pre-build Code
+
+
+// Events:
+    - Event-Driven Programming
+    - Used Heavily in Node.js
+    
+    - A style in which the flow of the program is at least in part determined by the event that occurs as the program executes.
+
+// Streams : 
+    - Streams are used to read or write sequentially.
+    - writeable
+    - readable
+    - duplex - both read and write sequentially
+    - transform - read & modify/ write & modify sequentially
+
