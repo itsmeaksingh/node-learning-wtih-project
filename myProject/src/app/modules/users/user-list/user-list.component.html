@@ -1,0 +1,43 @@
+<ng-container *ngIf="state$ | async as vm">
+  <section class="container">
+    <h1>Users</h1>
+    <a [routerLink]="['/users/add']" class="btn btn-sm btn-success mb-2"
+      >Add User</a
+    >
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Address</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of vm.studentList">
+          <td>{{ user.id }}</td>
+          <td>{{ user.name }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.phone }}</td>
+          <td>{{ user.address }}</td>
+          <td style="white-space: nowrap">
+            <a
+              [routerLink]="['edit', user.id]"
+              routerLinkActive="router-link-active"
+              class="btn btn-sm btn-primary mr-1"
+            >
+              Edit
+            </a>
+            <button
+              (click)="deleteUser(user.id)"
+              class="btn btn-sm btn-danger btn-delete-user ms-2"
+            >
+            Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</ng-container>
